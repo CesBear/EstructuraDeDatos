@@ -109,7 +109,6 @@ void ordenamiento_seleccion(int *a, int n)
                 a[j]=temp;
             }
         }
-
     }
     printf("Despues del odenamiento de Seleccion los elementos ordenados son: ");
     display(a, n);
@@ -161,14 +160,13 @@ void quicksort(int arreglo[SIZE],int primer,int ultimo, int n)
         arreglo[j]=temp;
         quicksort(arreglo,primer,j-1,n);
         quicksort(arreglo,j+1,ultimo,n);
-
-
     }
     printf("\nDespues del ordenamiento QuickSort los elementos ordenados son: ");
     display(arreglo, SIZE);
 }
 
 //--------- Busqueda Secuencial
+
 int ordenamientoModeloSecuencial(int n, int arreglo[SIZE])
 {
     char band = 'F';
@@ -180,7 +178,6 @@ int ordenamientoModeloSecuencial(int n, int arreglo[SIZE])
         }
         i++;
     }
-
     printf("\nValidando que el numero: %d exista en el arreglo... ", n);
     if (band == 'F') {
         printf("El numero %d no existe en el array", n);
@@ -219,6 +216,5 @@ int ordenamientoBusquedaBinaria (int buscar, const int arreglo[SIZE]) {
         printf("Numero %d encontrado en posicion %d\n", buscar, mitad);
     else
         printf("Numero no encontrado\n");
-
     return 0;
 }
