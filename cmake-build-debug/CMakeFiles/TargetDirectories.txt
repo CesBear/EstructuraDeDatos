@@ -1,0 +1,3 @@
+C:/SandraSilva/CLionProjects/ActividadIntegradora/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/SandraSilva/CLionProjects/ActividadIntegradora/cmake-build-debug/CMakeFiles/ActividadIntegradora.dir
+C:/SandraSilva/CLionProjects/ActividadIntegradora/cmake-build-debug/CMakeFiles/rebuild_cache.dir
