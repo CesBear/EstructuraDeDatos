@@ -2,7 +2,7 @@
 #include<math.h>
 #define SIZE 13
 
-void display(int a[],int n);
+void mostrarArreglo(int *a, int n);
 void ordenamiento_burbuja(int *a, int n);
 void ordenamiento_seleccion(int *a, int n);
 void ordemamiento_insercion(int *a, int n);
@@ -17,12 +17,12 @@ int main()
     int opcion;
     char ch[20];
     int arreglo[SIZE] = {8, 13, 6, 16, 2, 11, 9,  5, 1, 7, 15, 4, 10};
-
-    printf("Por favor seleciona una opcion para el odenamiento del arreglo: \n");
+    printf("Por favor seleciona una opcion para el ordenamiento del arreglo: \n");
+    mostrarArreglo(arreglo, SIZE);
 
     while(1)
     {
-        printf("\n1. Ordenamiento Burbuja\n2. Ordemamiento Seleccion\n3. Ordenamiento Insercion\n4. QuickSort\n5. Busqueda Secuencial\n6. Busqueda Binaria\n7. Mostrar Arreglo.\n8. Salir del programa.\n");
+        printf("\n1. Ordenamiento Burbuja\n2. Ordemamiento Seleccion\n3. Ordenamiento Insercion\n4. Ordenamiento QuickSort\n5. Busqueda Secuencial\n6. Busqueda Binaria\n7. Mostrar Arreglo.\n8. Salir del programa.\n");
         printf("\nSelecciona tu opcion : ");
         scanf_s("%d",&opcion);
 
@@ -49,9 +49,10 @@ int main()
                 ordenamientoBusquedaBinaria(15,arreglo);
                 break;
             case 7:
-                display(arreglo, SIZE);
+                mostrarArreglo(arreglo, SIZE);
                 break;
             case 8:
+                printf("Gracias por utilizar este programa! \n");
                 return 0;
             default:
                 printf("\n ¨Por favor selecciona una opcion entre 1-8 ----\n");
@@ -64,10 +65,10 @@ int main()
 
 //-------------------Imprimir Function-----------------
 
-void display(int a[], const int size)
+void mostrarArreglo(int *a, int n)
 {
     int i;
-    for(i=0; i<size; i++)
+    for(i=0; i < n; i++)
         printf("%d ",a[i]);
     printf("\n");
 }
@@ -90,7 +91,7 @@ void ordenamiento_burbuja(int *a, int n)
         }
     }
     printf("Despues del odenamiento de Burbuja los elementos ordenados son: ");
-    display(a, n);
+    mostrarArreglo(a, n);
 }
 
 //------------------Seleccion---------
@@ -111,7 +112,7 @@ void ordenamiento_seleccion(int *a, int n)
         }
     }
     printf("Despues del odenamiento de Seleccion los elementos ordenados son: ");
-    display(a, n);
+    mostrarArreglo(a, n);
 }
 
 //---------------Insercion -------------------
@@ -131,7 +132,7 @@ void ordemamiento_insercion(int *a, int n)
         a[j + 1]=min;
     }
     printf("Despues del odenamiento de Insersion los elementos ordenados son: ");
-    display(a, n);
+    mostrarArreglo(a, n);
 }
 
 //---------------Quick Sort -------------------
@@ -162,7 +163,7 @@ void quicksort(int arreglo[SIZE],int primer,int ultimo, int n)
         quicksort(arreglo,j+1,ultimo,n);
     }
     printf("\nDespues del ordenamiento QuickSort los elementos ordenados son: ");
-    display(arreglo, SIZE);
+    mostrarArreglo(arreglo, SIZE);
 }
 
 //--------- Busqueda Secuencial
